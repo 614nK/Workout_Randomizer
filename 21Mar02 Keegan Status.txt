@@ -1,0 +1,15 @@
+3/2/21 Update
+
+I went through and had to make some changes in order for the program to run on my machine. I had to include a '/' in front of 'PNG/' on line 42 because otherwise there was no directory separator being input from the recieved directory path. Dont know if this will mess you up or not. If it does we'll change it back and see why I'm so fucked up.
+
+I updated the interation through the loop to start at 0 since this is python and not Matlab
+
+I started a stab at a workout dicitonary to draw from with only one workout so far to test. I listed out the stuff I think it'll need such as:
+    -Body Group
+    -Muscle Group
+    -Equipment
+    -Location
+    -Difficulty
+I haven't incorporated anything into the main code for it yet.
+
+There are some random files that popped up in the folder that I don't know what they do or if they're important. Some of them looklike they're from sublime text and may have popped up as I was fiddling with the build settings to be able to run the module. Do you know if they're good to be deleted or not?

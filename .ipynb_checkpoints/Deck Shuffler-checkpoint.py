@@ -5,7 +5,9 @@
 import argparse
 import itertools, random
 import os
-#find_package(OpenCV)todoreview
+#from PIL import Image
+#OpenCV_DIR='/Users/keegan/Python/opencv'
+#find_package(OpenCV)
 import cv2 as cv
 
 # construct the argument parse and parse the command line arguments from user
@@ -33,11 +35,10 @@ random.shuffle(deck)
 dirpath = os.path.dirname(__file__)
 print(dirpath)
 
-#CHANGED: Adjusted the indexing to start at 0 since Python and not Matlab
-for i in range(0,len(deck)):
+
+for i in range(1,len(deck)+1):
     #CHANGED: In order to call from the Workout Randomizer directory
-    #CHANGED: Had to add '/' in front of 'PNG' to call the image
-    impath = dirpath+str('/PNG/')+deck[i][0]+deck[i][1]+str('.png')
+    impath = dirpath+str('PNG/')+deck[i][0]+deck[i][1]+str('.png')
     print(impath) 
     img = cv.imread(impath,1)
 
@@ -63,11 +64,11 @@ for i in range(0,len(deck)):
     #CHANGED: Altered again for ease of reading
     thickness = 5
    
-    #CHAED: Determine what workout should be printed
+    #CHANGED: Determine what workout should be printed
     #TODO: Determining if workouts have been entered
     test = None in args.values()
     if test == True:
-        workout = str(i+1)
+        workout = str(i)
     else:
         if impath.endswith("H.png"):
             workout = args["workout_hearts"]
